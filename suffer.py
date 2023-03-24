@@ -24,13 +24,13 @@ def main():
         requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale={0}'.format(key[1]), data={'phone_number': _phone}, headers={})
         print(Fore.GREEN + '[+] process sucsesfull!')
     except:
-        print(Fore.RED + '[-] Не отправлено!')
+        print(Fore.RED + '[-] Process failed!')
 
     try:
         requests.post('https://api.gotinder.com/v2/auth/sms/send?auth_type=sms&locale={0}'.format(key[1]),data={'phone_number': _phone})
         print(Fore.GREEN + '[+] process sucsesfull!')
     except:
-        print(Fore.RED + '[-] Не отправлено!')
+        print(Fore.RED + '[-] Process failed!')
     print("{0}".format(Style.RESET_ALL))
 
 def get_key():
